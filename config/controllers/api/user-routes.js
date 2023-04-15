@@ -36,22 +36,23 @@ router.post('/login', async (req, res) => {
         }
 
         const validPassword = await user.checkPassword(req.body.password);
-    }
+    
     if (!validPassword) {
-        res.status(400).json({ message: 'Incorrect password!' });
+        res.status(400).json({ message: "No user found!" });
         return;
-    }
-    req.session.save(() => {
+      }
+  
+      req.session.save(() => {
         req.session.user_id = user.id;
         req.session.username = user.username;
-        req.session.loggedIn = true;
-
-        res.json({ user, message: 'You are now logged in!' });
-    });
-  } catch (err) {
-    res.status(400).json({ message: "No user found!" });
-  }
-});
+        req.session.logged_in = true;
+  
+        res.json({ user, message: "You are now logged in!" });
+      });
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 // Route to logout a user
 router.post('/logout', (req, res) => {
