@@ -1,7 +1,7 @@
 const { Post } = require("../models");
 
 // Added a user_id to the post seeds
-const postseeds = [
+const postData = [
   {
     title: "MVC",
     content:
@@ -23,6 +23,6 @@ const postseeds = [
 ];
 
 // Seed the database with the post seeds
-const seedPost = () => Post.bulkCreate(postseeds);
+const seedPost = () => Post.bulkCreate(postData);
 
 module.exports = seedPost;
