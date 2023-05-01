@@ -1,8 +1,8 @@
 // import models
-const router = require('express').Router();
-const { Post } = require('../models');
-const withAuth = require('../utils/auth');
-const sequelize = require('../config/connection');
+const router = require("express").Router();
+const { Post } = require("../../models");
+const sequelize = require("../../config/connection");
+const withAuth = require("../../utils/auth");
 
 // Get all posts
 router.post ('/', withAuth, async(req, res) => {
