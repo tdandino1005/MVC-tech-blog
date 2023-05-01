@@ -1,7 +1,7 @@
 // import the router from express
 const router = require('express').Router();
-const { User, Post, Comment } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { User, Post, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 // GET all posts for dashboard
 router.get('/', withAuth, async (req, res) => {
