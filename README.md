@@ -1,5 +1,8 @@
 # MVC-tech-blog
 
+![image](https://user-images.githubusercontent.com/114967217/235824763-f4fc1f5c-9029-4a5e-9caa-184a8d5755f4.png)
+
+
 
 ## Table of Contents 
 - [User Story](#user-story)
