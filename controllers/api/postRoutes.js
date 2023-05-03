@@ -28,7 +28,7 @@ router.put('/:id', withAuth, async (req, res) => {
             },
         });
 // If no post found with this id, return 404
-        if (!updatePost) {
+        if (updatePost) {
             res.status(200).json(updatePost);
         } else {
             res.status(404).json({ message: 'No post found with this id!' });
@@ -47,7 +47,7 @@ router.delete('/:id', withAuth, async (req, res) => {
             },
         });
 // If no post found with this id, return 404
-        if (!deletePost) {
+        if (deletePost) {
             res.status(200).json(deletePost);
         } else {
             res.status(404).json({ message: 'No post found with this id!' });
