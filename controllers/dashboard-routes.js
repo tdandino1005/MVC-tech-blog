@@ -9,25 +9,30 @@ router.get('/', withAuth, async (req, res) => {
         // Get all posts and JOIN with user data
         const postData = await Post.findAll({
             where: {
-                user_id: req.session.user_id,
+              user_id: req.session.user_id,
             },
             include: [
-                {
-                    model: User,
-                    attributes: ['username'],
+              {
+                model: Comment,
+                include: {
+                  model: User,
+                  attributes: ["username"],
                 },
+              },
+              {
+                model: User,
+                attributes: ["username"],
+              },
             ],
-        });
+          });
 //  create a new post
         const posts = postData.map((post) => post.get({ plain: true }));
 // when the user clicks on a post, it will take them to the edit page
         res.render('dashboard', {
             posts,
-            logged_in: req.session.logged_in,
-        });
+            logged_in: req.session.logged_in});
 
-    }
-    catch (err) {
+    } catch (err) {
         res.redirect('/');
     }
 });
