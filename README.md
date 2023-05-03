@@ -29,7 +29,7 @@ This is a tech blog created in the UW Coding Bootcamp. On the front-end, the app
 - Ensure connect-session-sequelize is installed
 - Ensure dotenv is installed
 - Ensure bcrypt is installed
-- To connect to the database, once files are downloaded to you computer, you will need to use a .env file to input your password and username for your mysql.
+
 
 ## Usage:
 
