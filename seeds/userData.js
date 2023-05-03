@@ -1,6 +1,7 @@
 const { User } = require('../models');
 
-const userData = [
+// Create an array of data objects for the User model
+const userdata = [
     {
         username: 'John Doe',
         password: 'password12345',
