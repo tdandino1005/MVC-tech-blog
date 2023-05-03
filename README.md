@@ -1,8 +1,5 @@
 # MVC-tech-blog
 
-![image](https://user-images.githubusercontent.com/114967217/235824763-f4fc1f5c-9029-4a5e-9caa-184a8d5755f4.png)
-
-
 
 ## Table of Contents 
 - [User Story](#user-story)
@@ -10,6 +7,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Questions](#questions)
+
+![image](https://user-images.githubusercontent.com/114967217/235824763-f4fc1f5c-9029-4a5e-9caa-184a8d5755f4.png)
+
 
 ## User Story:
 AS A developer who writes about tech
@@ -20,6 +20,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Description:
 This is a MVC-tech-blog. This app can be deployed through heroku.
+https://sheltered-eyrie-62646.herokuapp.com/
 
 ## Installation:
 
